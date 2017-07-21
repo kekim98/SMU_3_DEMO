@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void onClick(View view) {
-        
+        SharedPreferences preferences = getSharedPreferences("Mypref", 0);
+        preferences.edit().remove ("shared_pref_key").commit();
         Toast.makeText(MainActivity.this, "Sending to 병무청 is completed", Toast.LENGTH_SHORT).show();
 
     }
