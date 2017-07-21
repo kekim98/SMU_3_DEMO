@@ -30,7 +30,8 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = nameInput.getText().toString();
                 String code = codeInput.getText().toString();
-                Toast.makeText(Main2Activity.this, "나라를 지키는 그대가 자랑스럽습니다.\n\t\t\t\t\t입대를 축하드립니다.", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(Main2Activity.this, name + "님 환영합니다.", Toast.LENGTH_SHORT).show();
                 Log.d("aaa","name"+name+"code"+code );
 
                 SharedPreferences pref = getPref(Main2Activity.this);
