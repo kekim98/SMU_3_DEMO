@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu:
                 intent = new Intent(this, Main2Activity.class);
                 startActivity(intent);
-                Toast.makeText(MainActivity.this, "\t\t\t\t\t\t\t입대를 축하드립니다.\n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "\t\t\t\t\t\t\t입대를 축하드립니다.\n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_LONG).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
