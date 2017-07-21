@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -54,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void onClick(View view) {
-        SharedPreferences preferences = getSharedPreferences("Mypref", 0);
-        preferences.edit().remove ("shared_pref_key").commit();
+
         Toast.makeText(MainActivity.this, "Sending to 병무청 is completed", Toast.LENGTH_SHORT).show();
 
     }
@@ -98,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 Toast.makeText(MainActivity.this, "\t\t\t\t\t\t\t입대를 축하드립니다.\n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_LONG).show();
                 return true;
+            case R.id.help:
+                Intent i = new Intent(this, Main4Activity.class);
+                startActivity(i);
             default:
                 return super.onOptionsItemSelected(item);
         }
