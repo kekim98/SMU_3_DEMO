@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    public void onClick(View view) {
+        Toast.makeText(MainActivity.this, "Send to 병무청 is completed", Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     protected void onResume(){
