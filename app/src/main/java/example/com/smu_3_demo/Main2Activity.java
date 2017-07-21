@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class Main2Activity extends AppCompatActivity {
                 String name = nameInput.getText().toString();
                 String code = codeInput.getText().toString();
 
+                Toast.makeText(Main2Activity.this, name + "님 환영합니다.", Toast.LENGTH_SHORT).show();
                 Log.d("aaa","name"+name+"code"+code );
 
                 SharedPreferences pref = getPref(Main2Activity.this);
