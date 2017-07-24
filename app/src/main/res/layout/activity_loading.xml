@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="example.com.smu_3_demo.LoadingActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="396dp"
+        android:layout_height="522dp"
+        app:srcCompat="@drawable/sm"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="16dp" />
 </android.support.constraint.ConstraintLayout>
