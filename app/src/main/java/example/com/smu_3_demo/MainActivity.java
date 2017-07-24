@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu:
                 intent = new Intent(this, Main2Activity.class);
                 startActivity(intent);
-                Toast.makeText(MainActivity.this, "\t\t\t\t\t\t\t입대를 축하드립니다.\n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "환영합니다.\n상명대학교 병무행정팀입니다.", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.help:
                 Intent i = new Intent(this, Main4Activity.class);
