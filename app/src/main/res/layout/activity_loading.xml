@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="396dp"
-        android:layout_height="522dp"
+        android:layout_width="395dp"
+        android:layout_height="587dp"
         app:srcCompat="@drawable/sm"
         tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
 </android.support.constraint.ConstraintLayout>
