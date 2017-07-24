@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         SharedPreferences preferences = getSharedPreferences("Mypref", 0);
         preferences.edit().remove("shared_pref_key").commit();
-        Toast.makeText(MainActivity.this, "예약이 완료되었습니다. 확인바랍니다^^", Toast.LENGTH_SHORT).show();
 
         Toast.makeText(MainActivity.this, "Sending to 병무청 is completed", Toast.LENGTH_SHORT).show();
 
