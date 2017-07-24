@@ -1,12 +1,15 @@
 package example.com.smu_3_demo;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -40,6 +43,65 @@ public class Main2Activity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn:
+
+                AlertDialog.Builder alertBuilder = new AlertDialog.Builder(
+                        Main2Activity.this);
+                alertBuilder.setTitle("항목중에 하나를 선택하세요.");
+
+                // List Adapter 생성
+                final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                        Main2Activity.this,
+                        android.R.layout.select_dialog_singlechoice);
+                adapter.add("해병");
+                adapter.add("육군");
+                adapter.add("해군");
+                adapter.add("공군");
+                adapter.add("의경");
+
+                // 버튼 생성
+                alertBuilder.setNegativeButton("취소",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                                int which) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                // Adapter 셋팅
+                alertBuilder.setAdapter(adapter,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                                int id) {
+
+                                // AlertDialog 안에 있는 AlertDialog
+                                String strName = adapter.getItem(id);
+                                AlertDialog.Builder innBuilder = new AlertDialog.Builder(
+                                        Main2Activity.this);
+                                innBuilder.setMessage(strName);
+                                innBuilder.setTitle("축하합니다. 당신이 입대할 곳은");
+                                innBuilder
+                                        .setPositiveButton(
+                                                "확인",
+                                                new DialogInterface.OnClickListener() {
+                                                    public void onClick(
+                                                            DialogInterface dialog,
+                                                            int which) {
+                                                        dialog.dismiss();
+                                                    }
+                                                });
+                                innBuilder.show();
+                            }
+                        });
+                alertBuilder.show();
+                break;
+
+            default:
+                break;
+        }
     }
     public static SharedPreferences getPref(Context context) {
         return context.getSharedPreferences(DEMO_PREFERENCE, MODE_PRIVATE);
