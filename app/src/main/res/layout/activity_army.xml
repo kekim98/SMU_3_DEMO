@@ -23,7 +23,8 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/soldier"
@@ -39,7 +40,8 @@
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/army"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/airforce"
@@ -55,7 +57,8 @@
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/sky"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/powerforce"
@@ -69,7 +72,8 @@
         app:srcCompat="@drawable/tj"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintRight_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/sanup"
@@ -85,7 +89,8 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/kongik"
@@ -102,7 +107,8 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/navy"
@@ -118,7 +124,8 @@
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/navy"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/bochung"
@@ -134,7 +141,8 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/marine"
@@ -150,7 +158,8 @@
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/marine"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/fireman"
@@ -165,7 +174,8 @@
         app:srcCompat="@drawable/eb"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/policearmy"
@@ -179,7 +189,8 @@
         app:srcCompat="@drawable/hb"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintRight_creator="1"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/police"
@@ -193,6 +204,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.695"
-        app:srcCompat="@drawable/cap" />
+        app:srcCompat="@drawable/cap"
+        tools:ignore="ContentDescription" />
 
 </android.support.constraint.ConstraintLayout>
