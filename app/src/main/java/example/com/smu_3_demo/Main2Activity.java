@@ -61,7 +61,7 @@ public class Main2Activity extends AppCompatActivity {
                     String name = nameInput.getText().toString();
                     String code = codeInput.getText().toString();
 
-                    Toast.makeText(Main2Activity.this, name + "님 입대를 축하드립니다.\n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this, name + "님 입대를 축하드립니다. \n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_SHORT).show();
 
                     SharedPreferences pref = getPref(Main2Activity.this);
                     pref.edit().putString(name, code).apply();
@@ -78,28 +78,11 @@ public class Main2Activity extends AppCompatActivity {
                     PendingIntent notifyPendingIntent = PendingIntent.getActivity(Main2Activity.this, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
                     mBuilder.setContentIntent(notifyPendingIntent);
+                    mBuilder.setAutoCancel(true);
                     NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                     mNotificationManager.notify(1, mBuilder.build());
                     finish();
 
-
-//                    NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-//                    Intent intent = new Intent(Main2Activity.this,Main3Activity.class);
-//                    intent.putExtra("name",name);
-//                    intent.putExtra("code",code);
-//                    PendingIntent pendingIntent = PendingIntent.getActivity(Main2Activity.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-//
-//                    Notification.Builder mBuilder = new Notification.Builder(Main2Activity.this);
-//                    mBuilder.setWhen(System.currentTimeMillis());
-//                    mBuilder.setContentTitle("입영 신청이 완료되었습니다." );
-//                    mBuilder.setContentText("이름 : "+name+"\n학번:"+code);
-//                    mBuilder.setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
-//                    mBuilder.setContentIntent(pendingIntent);
-//                    mBuilder.setAutoCancel(true);
-//
-//                    nm.notify(111, mBuilder.build());
-//
-//                    finish();
                 }
             }
         });
