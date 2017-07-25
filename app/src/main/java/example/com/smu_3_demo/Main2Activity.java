@@ -102,7 +102,10 @@ public class Main2Activity extends AppCompatActivity {
                         });
                 alertBuilder.show();
                 break;
-
+            case R.id.buttonX:
+                ((EditText) findViewById(R.id.name)).setText("");
+            case R.id.buttonXX:
+                ((EditText) findViewById(R.id.code)).setText("");
             default:
                 break;
         }

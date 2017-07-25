@@ -7,10 +7,16 @@
         android:id="@+id/help"
         android:icon="@android:drawable/ic_menu_month"
         android:title="이 달의 모집계획"
-        app:showAsAction="always" />
+        tools:ignore="HardcodedText" />
     <item
         android:id="@+id/menu"
         android:icon="@android:drawable/ic_menu_add"
         android:title="add contact"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/army"
+        android:icon="@drawable/army"
+        android:title="군종별 설명 및 안내"
+        tools:ignore="HardcodedText" />
 </menu>
