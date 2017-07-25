@@ -106,6 +106,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.help:
                 Intent i = new Intent(this, Main4Activity.class);
                 startActivity(i);
+                return true;
+            case R.id.army:
+                Intent a = new Intent(this, ArmyActivity.class);
+                startActivity(a);
+                Toast.makeText(MainActivity.this, "\t\t\t\t\t\t\t\t군종을 선택하면\n해당 군종 입영 관련 정보가 나옵니다.", Toast.LENGTH_LONG).show();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
