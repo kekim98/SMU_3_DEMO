@@ -8,7 +8,7 @@
     tools:context="example.com.smu_3_demo.ArmyActivity">
 
     <ImageButton
-        android:id="@+id/army"
+        android:id="@+id/soldier"
         android:layout_width="80dp"
         android:layout_height="100dp"
         android:onClick="onClick"
@@ -83,7 +83,7 @@
         android:layout_height="100dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/fireman"
-        app:layout_constraintLeft_toLeftOf="@+id/army"
+        app:layout_constraintLeft_toLeftOf="@+id/soldier"
         app:layout_constraintRight_toLeftOf="@+id/fireman"
         app:layout_constraintTop_toTopOf="@+id/fireman"
         app:srcCompat="@drawable/bc"
@@ -129,7 +129,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/powerforce"
         app:layout_constraintLeft_toLeftOf="@+id/bochung"
         app:layout_constraintRight_toRightOf="@+id/bochung"
-        app:layout_constraintTop_toBottomOf="@+id/army"
+        app:layout_constraintTop_toBottomOf="@+id/soldier"
         app:srcCompat="@drawable/kt"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"

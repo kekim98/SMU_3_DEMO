@@ -15,7 +15,7 @@
         app:showAsAction="always"
         tools:ignore="HardcodedText" />
     <item
-        android:id="@+id/army"
+        android:id="@+id/soldier"
         android:icon="@drawable/army"
         android:title="군종별 설명 및 안내"
         tools:ignore="HardcodedText" />

@@ -1,31 +1,19 @@
 package example.com.smu_3_demo;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
-import android.preference.PreferenceManager;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.NotificationCompat;
-import android.support.v7.widget.PopupMenu;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -107,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(this, Main4Activity.class);
                 startActivity(i);
                 return true;
-            case R.id.army:
+            case R.id.soldier:
                 Intent a = new Intent(this, ArmyActivity.class);
                 startActivity(a);
                 Toast.makeText(MainActivity.this, "\t\t\t\t\t\t\t\t군종을 선택하면\n해당 군종 입영 관련 정보가 나옵니다.", Toast.LENGTH_LONG).show();

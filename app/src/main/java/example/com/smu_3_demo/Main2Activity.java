@@ -104,8 +104,10 @@ public class Main2Activity extends AppCompatActivity {
                 break;
             case R.id.buttonX:
                 ((EditText) findViewById(R.id.name)).setText("");
+                break;
             case R.id.buttonXX:
                 ((EditText) findViewById(R.id.code)).setText("");
+                break;
             default:
                 break;
         }
