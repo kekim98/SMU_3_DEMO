@@ -66,20 +66,23 @@ public class Main2Activity extends AppCompatActivity {
                     SharedPreferences pref = getPref(Main2Activity.this);
                     pref.edit().putString(name, code).apply();
 
+                    NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                    Notification.Builder mBuilder = (Notification.Builder) new Notification.Builder(Main2Activity.this);
 
-                    Notification.Builder mBuilder = (Notification.Builder) new Notification.Builder(Main2Activity.this)
-                            .setSmallIcon(R.drawable.ic_stat_name)
-                            .setContentTitle("입영 신청 완료")
-                            .setContentText("이름 : "+name+"\n학번:"+code);
                     Intent notifyIntent = new Intent(Main2Activity.this, Main3Activity.class);
                     notifyIntent.putExtra("name",name);
                     notifyIntent.putExtra("code",code);
                     notifyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     PendingIntent notifyPendingIntent = PendingIntent.getActivity(Main2Activity.this, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
+                    mBuilder.setSmallIcon(R.drawable.ic_stat_name);
+                    mBuilder.setWhen(System.currentTimeMillis());
+                    mBuilder.setContentTitle("입영 신청 완료");
+                    mBuilder.setContentText("이름 : "+name+"\n학번:"+code);
+                    mBuilder.setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
                     mBuilder.setContentIntent(notifyPendingIntent);
                     mBuilder.setAutoCancel(true);
-                    NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
                     mNotificationManager.notify(1, mBuilder.build());
                     finish();
 
