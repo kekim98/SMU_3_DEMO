@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -29,22 +30,38 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         final EditText nameInput = (EditText) findViewById(R.id.name);
-        final TextView codeInput = (EditText) findViewById(R.id.code);
-        Button saveButton = (Button) findViewById(R.id.save);
+        final EditText codeInput = (EditText) findViewById(R.id.code);
+        final Button saveButton = (Button) findViewById(R.id.save);
+
 
         saveButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                String name = nameInput.getText().toString();
-                String code = codeInput.getText().toString();
 
-                Toast.makeText(Main2Activity.this, name + "님 입대를 축하드립니다.\n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_SHORT).show();
-                Log.d("aaa","name"+name+"code"+code );
+                if(TextUtils.isEmpty(nameInput.getText())&&(TextUtils.isEmpty(codeInput.getText()))) {
+                    Toast.makeText(Main2Activity.this, "이름과 학번을 입력하세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if(TextUtils.isEmpty(nameInput.getText())){
+                    Toast.makeText(Main2Activity.this, "이름을 입력하세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if(TextUtils.isEmpty(codeInput.getText())){
+                    Toast.makeText(Main2Activity.this, "학번을 입력하세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else {
+                    String name = nameInput.getText().toString();
+                    String code = codeInput.getText().toString();
 
-                SharedPreferences pref = getPref(Main2Activity.this);
-                pref.edit().putString(name, code).apply();
-                finish();
+                    Toast.makeText(Main2Activity.this, name + "님 입대를 축하드립니다.\n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_SHORT).show();
+                    Log.d("aaa","name"+name+"code"+code );
+
+                    SharedPreferences pref = getPref(Main2Activity.this);
+                    pref.edit().putString(name, code).apply();
+                    finish();
+                }
             }
         });
     }
