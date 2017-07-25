@@ -118,7 +118,6 @@ public class Main2Activity extends AppCompatActivity {
                         });
 
                 // Adapter 셋팅
-                final Intent selectedArmy = new Intent(this, Main3Activity.class);
                 alertBuilder.setAdapter(adapter,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog,
@@ -131,8 +130,6 @@ public class Main2Activity extends AppCompatActivity {
                                 innBuilder.setMessage(strName);
                                 Button btn = (Button) findViewById(R.id.btn);
                                 btn.setText(strName);
-                                selectedArmy.putExtra("key", strName);
-                                startActivity(selectedArmy);
                                 innBuilder.setTitle("축하합니다. 당신이 입영할 곳은");
                                 innBuilder
                                         .setPositiveButton(

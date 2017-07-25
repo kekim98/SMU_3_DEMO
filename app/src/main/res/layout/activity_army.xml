@@ -20,11 +20,11 @@
         app:layout_constraintTop_toBottomOf="@+id/soldier"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/kt"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/soldier"
@@ -39,9 +39,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/army"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/airforce"
@@ -56,9 +56,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/sky"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/powerforce"
@@ -70,10 +70,10 @@
         app:layout_constraintLeft_toLeftOf="@+id/navy"
         app:layout_constraintRight_toRightOf="@+id/navy"
         app:srcCompat="@drawable/tj"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintRight_creator="1" />
 
     <ImageButton
         android:id="@+id/sanup"
@@ -86,11 +86,11 @@
         app:layout_constraintRight_toRightOf="@+id/policearmy"
         app:layout_constraintTop_toTopOf="@+id/fireman"
         app:srcCompat="@drawable/su"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/kongik"
@@ -104,11 +104,11 @@
         app:layout_constraintRight_toRightOf="@+id/police"
         app:layout_constraintTop_toBottomOf="@+id/police"
         app:srcCompat="@drawable/sb"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/navy"
@@ -123,9 +123,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/navy"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/bochung"
@@ -138,11 +138,11 @@
         app:layout_constraintRight_toLeftOf="@+id/fireman"
         app:layout_constraintTop_toTopOf="@+id/fireman"
         app:srcCompat="@drawable/bc"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/marine"
@@ -157,9 +157,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499"
         app:srcCompat="@drawable/marine"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/fireman"
@@ -172,10 +172,10 @@
         app:layout_constraintRight_toRightOf="@+id/powerforce"
         app:layout_constraintTop_toBottomOf="@+id/police"
         app:srcCompat="@drawable/eb"
+        tools:ignore="ContentDescription"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintTop_creator="1" />
 
     <ImageButton
         android:id="@+id/policearmy"
@@ -187,10 +187,10 @@
         app:layout_constraintLeft_toLeftOf="@+id/marine"
         app:layout_constraintRight_toRightOf="@+id/marine"
         app:srcCompat="@drawable/hb"
+        tools:ignore="ContentDescription"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:ignore="ContentDescription" />
+        tools:layout_constraintRight_creator="1" />
 
     <ImageButton
         android:id="@+id/police"

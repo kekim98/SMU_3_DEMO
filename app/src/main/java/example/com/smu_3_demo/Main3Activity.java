@@ -14,18 +14,18 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
         TextView nameText = (TextView) findViewById(R.id.name);
         TextView codeText = (TextView) findViewById(R.id.code);
-        TextView armyText = (TextView) findViewById(R.id.textView6);
+
 
 
         Intent recvIntent = getIntent();
         Bundle extras = recvIntent.getExtras();
         String name = extras.getString("name", "UNKNOWN");
         String code = extras.getString("code", "UNKNOWN");
-        String selectedarmy = getIntent().getStringExtra("key");
+
 
 
         nameText.setText(name);
         codeText.setText(code);
-        armyText.setText(selectedarmy);
+
     }
 }
