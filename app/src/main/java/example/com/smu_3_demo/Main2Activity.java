@@ -15,8 +15,11 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static example.com.smu_3_demo.R.id.btn;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -67,11 +70,11 @@ public class Main2Activity extends AppCompatActivity {
     }
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn:
+            case btn:
 
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(
                         Main2Activity.this);
-                alertBuilder.setTitle("항목중에 하나를 선택하세요.");
+                alertBuilder.setTitle("입영하길 원하는 군종을 누르시오.");
 
                 // List Adapter 생성
                 final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
@@ -103,7 +106,9 @@ public class Main2Activity extends AppCompatActivity {
                                 AlertDialog.Builder innBuilder = new AlertDialog.Builder(
                                         Main2Activity.this);
                                 innBuilder.setMessage(strName);
-                                innBuilder.setTitle("축하합니다. 당신이 입대할 곳은");
+                                Button btn = (Button) findViewById(R.id.btn);
+                                btn.setText(strName);
+                                innBuilder.setTitle("축하합니다. 당신이 입영할 곳은");
                                 innBuilder
                                         .setPositiveButton(
                                                 "확인",
