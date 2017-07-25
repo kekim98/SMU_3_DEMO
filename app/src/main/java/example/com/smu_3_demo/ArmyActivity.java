@@ -50,8 +50,22 @@ public class ArmyActivity extends AppCompatActivity {
                 Intent j = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mma.go.kr/contents.do?mc=mma0000501"));
                 startActivity(j);
                 break;
-
-
+            case R.id.bochung:
+                Intent k = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mma.go.kr/contents.do?mc=mma0000760"));
+                startActivity(k);
+                break;
+            case R.id.sanup:
+                Intent l = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mma.go.kr/contents.do?mc=mma0000760"));
+                startActivity(l);
+                break;
+            case R.id.fireman:
+                Intent m = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.nfsa.go.kr/"));
+                startActivity(m);
+                break;
+            case R.id.kongik:
+                Intent n = new Intent(Intent.ACTION_VIEW, Uri.parse("http://sbm.mma.go.kr/caisSHBS/"));
+                startActivity(n);
+                break;
             default:
                 break;
         }
