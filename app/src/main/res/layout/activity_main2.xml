@@ -45,7 +45,7 @@
         android:id="@+id/btn"
         android:layout_width="230dp"
         android:layout_height="45dp"
-        android:background="?attr/editTextBackground"
+        android:background="@android:drawable/btn_dropdown"
         android:onClick="onClick"
         android:text="선택"
         android:textAppearance="@android:style/TextAppearance.DialogWindowTitle"
