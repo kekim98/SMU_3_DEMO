@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/bochung"
         app:layout_constraintRight_toRightOf="@+id/bochung"
-        app:layout_constraintTop_toBottomOf="@+id/soldier"
+        app:layout_constraintTop_toBottomOf="@+id/gotomarine"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/kt"
         tools:ignore="ContentDescription"
@@ -27,7 +27,7 @@
         tools:layout_constraintTop_creator="1" />
 
     <ImageButton
-        android:id="@+id/soldier"
+        android:id="@+id/gotomarine"
         android:layout_width="80dp"
         android:layout_height="100dp"
         android:onClick="onClick"
@@ -134,7 +134,7 @@
         android:onClick="onClick"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/fireman"
-        app:layout_constraintLeft_toLeftOf="@+id/soldier"
+        app:layout_constraintLeft_toLeftOf="@+id/gotomarine"
         app:layout_constraintRight_toLeftOf="@+id/fireman"
         app:layout_constraintTop_toTopOf="@+id/fireman"
         app:srcCompat="@drawable/bc"

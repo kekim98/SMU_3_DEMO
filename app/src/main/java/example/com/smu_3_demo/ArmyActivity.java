@@ -18,7 +18,7 @@ public class ArmyActivity extends AppCompatActivity {
 
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.soldier:
+            case R.id.gotomarine:
                 Intent b = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.katc.mil.kr/katc/"));
                 startActivity(b);
                 break;

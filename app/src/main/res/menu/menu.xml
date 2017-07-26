@@ -15,8 +15,14 @@
         app:showAsAction="always"
         tools:ignore="HardcodedText" />
     <item
-        android:id="@+id/soldier"
+        android:id="@+id/gotomarine"
         android:icon="@drawable/army"
-        android:title="군종별 설명 및 안내"
+        android:title="군종별 입영 안내"
         tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/apply"
+        android:title="재학생 입영 신청 안내" />
+    <item
+        android:id="@+id/delay"
+        android:title="재학생 입영 연기 안내" />
 </menu>

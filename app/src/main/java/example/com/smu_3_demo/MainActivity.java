@@ -2,6 +2,7 @@ package example.com.smu_3_demo;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -95,10 +96,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(this, Main4Activity.class);
                 startActivity(i);
                 return true;
-            case R.id.soldier:
+            case R.id.gotomarine:
                 Intent a = new Intent(this, ArmyActivity.class);
                 startActivity(a);
                 Toast.makeText(MainActivity.this, "\t\t\t\t\t\t\t\t군종을 선택하면\n해당 군종 입영 관련 정보가 나옵니다.", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.apply:
+                Intent apply = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mma.go.kr/contents.do?mc=usr0000176"));
+                startActivity(apply);
+                return true;
+            case R.id.delay:
+                Intent delay = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mma.go.kr/contents.do?mc=usr0000174"));
+                startActivity(delay);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
