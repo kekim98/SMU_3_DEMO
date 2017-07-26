@@ -63,7 +63,7 @@ public class Main2Activity extends AppCompatActivity {
                     String name = nameInput.getText().toString();
                     String code = codeInput.getText().toString();
 
-                    Toast.makeText(Main2Activity.this, name + R.string.cele, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this, name+"님 환영합니다. 그대가 자랑스럽습니다.", Toast.LENGTH_SHORT).show();
 
                     SharedPreferences pref = getPref(Main2Activity.this);
                     pref.edit().putString(name, code).apply();

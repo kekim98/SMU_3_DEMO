@@ -22,5 +22,8 @@
     <string name="af">republic of korea air force</string>
     <string name="police">republic of korea duty police</string>
     <string name="cong">Army will be reserve for</string>
-    <string name="del">.</string>
+    <string name="del">Are you sure you want to delete the selected applicant?</string>
+    <string name="name2">"Applicant Name : "</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 </resources>

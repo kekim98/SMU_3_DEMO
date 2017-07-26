@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 final String name = (String) adapterView.getAdapter().getItem(i);
 
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("선택한 신청자를 삭제하시겠습니까?")
-                        .setMessage("신청자 이름 : " + name)
-                        .setNegativeButton("아니요", new DialogInterface.OnClickListener()
+                        .setTitle(R.string.del)
+                        .setMessage("신청자 이름 : "+ name)
+                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener()
                         {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i)
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                                 dialogInterface.dismiss();
                             }
                         })
-                        .setPositiveButton("예", new DialogInterface.OnClickListener()
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener()
                         {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i)
