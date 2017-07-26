@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SMU_Student Enlistment Guide</string>
     <string name="name">Name :</string>
-    <string name="code">Student ID :</string>
+    <string name="code">ID :</string>
     <string name="save">SAVE</string>
     <string name="push_name">Please enter your name</string>
     <string name="push_code">Please enter your student ID</string>
@@ -11,4 +11,15 @@
     <string name="Postponement">Postponement of enlistment guide</string>
     <string name="Application">Application for enlistment guide</string>
     <string name="species">enlistment guide by military species</string>
+    <string name="information">Applicant information</string>
+    <string name="welcome">welcome to sangmyung univ military center!</string>
+    <string name="cele">welcome!!! we are proud of your challenge!</string>
+    <string name="noti">reserve complete!</string>
+    <string name="choose">choose your army that you want to join</string>
+    <string name="mc">the marine corp</string>
+    <string name="army">republic of korea army</string>
+    <string name="navy">republic of korea navy</string>
+    <string name="af">republic of korea air force</string>
+    <string name="police">republic of korea duty police</string>
+    <string name="cong">Army will be reserve for</string>
 </resources>

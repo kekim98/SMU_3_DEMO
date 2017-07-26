@@ -3,6 +3,7 @@ package example.com.smu_3_demo;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -51,7 +52,18 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("Mypref", 0);
         preferences.edit().remove("shared_pref_key").commit();
 
-        Toast.makeText(MainActivity.this, "Sending to 병무청 is completed", Toast.LENGTH_SHORT).show();
+        mListAdapter.clear();
+        System.out.println(nameList);
+
+        //SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this.getApplicationContext());
+        SharedPreferences pref = getSharedPreferences("lottoSetting", MainActivity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        int keep = pref.getInt("keep", 0);
+        editor.putInt("keep",keep);
+        editor.clear().commit();
+
+
+        Toast.makeText(MainActivity.this, R.string.send, Toast.LENGTH_SHORT).show();
 
     }
 
@@ -89,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu:
                 intent = new Intent(this, Main2Activity.class);
                 startActivity(intent);
-                Toast.makeText(MainActivity.this, "환영합니다.\n상명대학교 병무행정팀입니다.", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.welcome, Toast.LENGTH_LONG).show();
                 return true;
             case R.id.help:
                 Intent i = new Intent(this, Main4Activity.class);

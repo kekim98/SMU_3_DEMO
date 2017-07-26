@@ -12,4 +12,15 @@
     <string name="Application">재학생 입영 신청 안내</string>
     <string name="Postponement">재학생 입영 연기 안내</string>
     <string name="species">군종별 입영 안내</string>
+    <string name="information">입영 신청자 정보</string>
+    <string name="welcome">환영합니다. 상명대학교 병무행정팀입니다.</string>
+    <string name="cele">님 환영합니다. 그대가 자랑스럽습니다.</string>
+    <string name="noti">신청 완료!</string>
+    <string name="choose">입영하기를 원하는 군종을 선택하세요.</string>
+    <string name="mc">해병대</string>
+    <string name="army">대한육군</string>
+    <string name="navy">대한해군</string>
+    <string name="police">의경</string>
+    <string name="cong">당신이 입영할 곳은</string>
+    <string name="af">대한공군</string>
 </resources>

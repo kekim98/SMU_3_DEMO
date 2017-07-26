@@ -63,7 +63,7 @@ public class Main2Activity extends AppCompatActivity {
                     String name = nameInput.getText().toString();
                     String code = codeInput.getText().toString();
 
-                    Toast.makeText(Main2Activity.this, name + "님 입대를 축하드립니다. \n나라를 지키는 그대가 자랑스럽습니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this, name + R.string.cele, Toast.LENGTH_SHORT).show();
 
                     SharedPreferences pref = getPref(Main2Activity.this);
                     pref.edit().putString(name, code).apply();
@@ -79,7 +79,7 @@ public class Main2Activity extends AppCompatActivity {
 
                     mBuilder.setSmallIcon(R.drawable.ic_stat_name);
                     mBuilder.setWhen(System.currentTimeMillis());
-                    mBuilder.setContentTitle("입영 신청 완료");
+                    mBuilder.setContentTitle("신청 완료!");
                     mBuilder.setContentText("이름 : "+name+"\n학번:"+code);
                     mBuilder.setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
                     mBuilder.setContentIntent(notifyPendingIntent);
@@ -98,7 +98,7 @@ public class Main2Activity extends AppCompatActivity {
 
                 AlertDialog.Builder alertBuilder = new AlertDialog.Builder(
                         Main2Activity.this);
-                alertBuilder.setTitle("입영하길 원하는 군종을 누르시오.");
+                alertBuilder.setTitle(R.string.choose);
 
                 // List Adapter 생성
                 final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
@@ -134,7 +134,7 @@ public class Main2Activity extends AppCompatActivity {
                                 btn.setText(strName);
                                 String button = btn.getText().toString();
 
-                                innBuilder.setTitle("축하합니다. 당신이 입영할 곳은");
+                                innBuilder.setTitle(R.string.cong);
                                 innBuilder
                                         .setPositiveButton(
                                                 "확인",

@@ -21,7 +21,7 @@
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/apply"
-        android:title="재학생 입영원 안내"
+        android:title="@string/Application"
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/delay"
