@@ -1,5 +1,7 @@
 package example.com.smu_3_demo;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -17,6 +19,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.Map;
+
+import static example.com.smu_3_demo.Main2Activity.DEMO_PREFERENCE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,21 +50,67 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        nameList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener()
+        {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l)
+            {
+                final String name = (String) adapterView.getAdapter().getItem(i);
+
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("선택한 신청자를 삭제하시겠습니까?")
+                        .setMessage("신청자 이름 : " + name)
+                        .setNegativeButton("아니요", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i)
+                            {
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .setPositiveButton("예", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i)
+                            {
+                                SharedPreferences pref = getSharedPreferences(DEMO_PREFERENCE, MODE_PRIVATE);
+                                SharedPreferences.Editor editor = pref.edit();
+                                editor.remove(name);
+                                editor.commit();
+
+                                refresh();
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .show();
+
+                return true;
+            }
+        });
+
     }
 
-    public void onClick(View view) {
-        SharedPreferences preferences = getSharedPreferences("Mypref", 0);
-        preferences.edit().remove("shared_pref_key").commit();
+    public void onClick(View v) {
+        final SharedPreferences preferences = getSharedPreferences("Mypref", 0);
+        //preferences.edit().remove("shared_pref_key").commit();
 
         mListAdapter.clear();
         System.out.println(nameList);
 
-        //SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this.getApplicationContext());
-        SharedPreferences pref = getSharedPreferences("lottoSetting", MainActivity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        int keep = pref.getInt("keep", 0);
-        editor.putInt("keep",keep);
-        editor.clear().commit();
+//        //SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this.getApplicationContext());
+//        SharedPreferences pref = getSharedPreferences("lottoSetting", MainActivity.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = pref.edit();
+//        int keep = pref.getInt("keep", 0);
+//        editor.putInt("keep",keep);
+//        editor.clear().commit();
+
+//        for(int position : reverseSortedPositions) {
+//            final String hi = mListAdapter.getItem(position);
+//            mListAdapter.remove(hi);
+//            editor.remove(hi);
+//            editor.apply();
+//        }
+//        mListAdapter.notifyDataSetChanged();
 
 
         Toast.makeText(MainActivity.this, R.string.send, Toast.LENGTH_SHORT).show();

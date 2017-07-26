@@ -11,7 +11,7 @@
     <string name="Postponement">Postponement of enlistment guide</string>
     <string name="Application">Application for enlistment guide</string>
     <string name="species">enlistment guide by military species</string>
-    <string name="information">Applicant information</string>
+    <string name="information">Details of applicants for enlistment</string>
     <string name="welcome">welcome to sangmyung univ military center!</string>
     <string name="cele">welcome!!! we are proud of your challenge!</string>
     <string name="noti">reserve complete!</string>
@@ -22,4 +22,5 @@
     <string name="af">republic of korea air force</string>
     <string name="police">republic of korea duty police</string>
     <string name="cong">Army will be reserve for</string>
+    <string name="del">.</string>
 </resources>
