@@ -10,11 +10,27 @@
     tools:layout_editor_absoluteX="0dp">
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/date"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:ems="10"
-        android:hint="이름을 입력하세요"
+        android:hint="입영일을 입력하세요."
+        android:inputType="textPersonName"
+        android:maxLength="18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642"
+        tools:ignore="HardcodedText,LabelFor" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="이름을 입력하세요."
         android:inputType="textPersonName"
         android:maxLength="18"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +46,7 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:ems="10"
-        android:hint="학번을 입력하세요"
+        android:hint="학번을 입력하세요."
         android:inputType="number"
         android:maxLength="18"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,7 +60,7 @@
     <Button
         android:id="@+id/btn"
         android:layout_width="230dp"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:background="@android:drawable/btn_dropdown"
         android:onClick="onClick"
         android:text="선택"
@@ -54,7 +70,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646"
+        app:layout_constraintVertical_bias="0.728"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -69,7 +85,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726"
+        app:layout_constraintVertical_bias="0.807"
         tools:ignore="HardcodedText,NewApi"
         app:layout_constraintHorizontal_bias="0.498" />
 
@@ -111,7 +127,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.637"
+        app:layout_constraintVertical_bias="0.723"
         app:srcCompat="@drawable/soldier"
         tools:ignore="ContentDescription" />
 
@@ -119,13 +135,14 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="34dp"
-        android:text="* 입대를 원하는 학생은 이름과 학번을 입력하고\n\t 원하는 군종을 선택한 뒤, 저장하세요."
+        android:text="* 입영을 원하는 학생은 이름, 학번, 입영일자를 입력하고\n\t 군종을 선택한 뒤, 저장하세요."
         tools:ignore="HardcodedText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.889" />
+        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.496" />
 
     <Button
         android:id="@+id/buttonX"
@@ -142,6 +159,20 @@
         app:layout_constraintVertical_bias="0.462" />
 
     <Button
+        android:id="@+id/buttonXXX"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:background="@android:drawable/ic_menu_close_clear_cancel"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634"
+        tools:ignore="HardcodedText" />
+
+    <Button
         android:id="@+id/buttonXX"
         android:layout_width="38dp"
         android:layout_height="34dp"
@@ -154,5 +185,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.548"
         tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641"
+        app:srcCompat="@drawable/date" />
 
 </android.support.constraint.ConstraintLayout>
