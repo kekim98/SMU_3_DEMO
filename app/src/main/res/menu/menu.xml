@@ -21,8 +21,10 @@
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/apply"
-        android:title="재학생 입영 신청 안내" />
+        android:title="재학생 입영원 안내"
+        tools:ignore="HardcodedText" />
     <item
         android:id="@+id/delay"
-        android:title="재학생 입영 연기 안내" />
+        android:title="재학생 입영 연기 안내"
+        tools:ignore="HardcodedText" />
 </menu>

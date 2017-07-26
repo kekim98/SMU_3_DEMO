@@ -17,9 +17,8 @@ public class Main3Activity extends AppCompatActivity {
         TextView nameText = (TextView) findViewById(R.id.name);
         TextView codeText = (TextView) findViewById(R.id.code);
 
-
-
         Intent recvIntent = getIntent();
+        
         Bundle extras = recvIntent.getExtras();
         String name = extras.getString("name", "UNKNOWN");
         String code = extras.getString("code", "UNKNOWN");
