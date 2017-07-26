@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">SMU_Student Enlistment Guide</string>
+    <string name="name">Name</string>
+    <string name="code">Student ID</string>
+    <string name="save">SAVE</string>
+    <string name="push_name">Please enter your name</string>
+    <string name="push_code">Please enter your student ID</string>
+    <string name="push_name_code">Please enter your name and student ID</string>
+    <string name="send">Sending to  Military Manpower Administration is completed</string>
+    <string name="recruitment">This month\'s recruitment plan</string>
+    <string name="Postponement">Postponement of enlistment guide</string>
+    <string name="Application">Application for enlistment guide</string>
+    <string name="species">enlistment guide by military species</string>
 </resources>

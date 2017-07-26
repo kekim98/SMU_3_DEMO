@@ -20,11 +20,7 @@ public class Main3Activity extends AppCompatActivity {
 
 
         Intent recvIntent = getIntent();
-        Intent notifyIntent = getIntent();
-
         Bundle extras = recvIntent.getExtras();
-        Bundle extra = notifyIntent.getExtras();
-
         String name = extras.getString("name", "UNKNOWN");
         String code = extras.getString("code", "UNKNOWN");
 

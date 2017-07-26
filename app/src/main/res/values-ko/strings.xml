@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">상명대학교 재학생 입영도우미</string>
+    <string name="name">이름</string>
+    <string name="code">학번</string>
+    <string name="save">저장</string>
+    <string name="push_name">이름을 입력하세요</string>
+    <string name="push_code">학번을 입력하세요</string>
+    <string name="push_name_code">이름과 학번을 입력하세요</string>
+    <string name="send">병무청으로 송신 완료되었습니다.</string>
+    <string name="recruitment">이 달의 모집 계획</string>
+    <string name="Application">재학생 입영 신청 안내</string>
+    <string name="Postponement">재학생 입영 연기 안내</string>
+    <string name="species">군종별 입영 안내</string>
 </resources>
