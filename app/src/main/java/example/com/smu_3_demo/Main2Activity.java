@@ -29,6 +29,8 @@ public class Main2Activity extends AppCompatActivity {
 
     public static final String DEMO_PREFERENCE = "DEMO_PREFERENCE";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -130,6 +132,12 @@ public class Main2Activity extends AppCompatActivity {
                                 innBuilder.setMessage(strName);
                                 Button btn = (Button) findViewById(R.id.btn);
                                 btn.setText(strName);
+
+                                //입력값 보내기
+                                Intent notifyIntent = new Intent(Main2Activity.this, Main3Activity.class);
+                                notifyIntent.putExtra("strName", strName);
+                                String button = btn.getText().toString();
+
                                 innBuilder.setTitle("축하합니다. 당신이 입영할 곳은");
                                 innBuilder
                                         .setPositiveButton(

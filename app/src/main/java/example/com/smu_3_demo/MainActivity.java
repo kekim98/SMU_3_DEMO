@@ -58,22 +58,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("MainActivity", "onResumeeeeeeeeeee");
         refresh();
     }
 
     private void refresh() {
-        Log.d("MainActivity", "refreshhhhhhhhh");
         SharedPreferences pref = Main2Activity.getPref(this);
 
         mListAdapter.clear();
         Map<String, ?> values = pref.getAll();
         for (String key : values.keySet()) {
-            Log.d("aaa", "" + key);
             mListAdapter.add(key);
         }
         mListAdapter.notifyDataSetChanged();
     }
+
 
 
     @Override
