@@ -20,13 +20,14 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayAdapter<String> mListAdapter;
+    ListView nameList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView nameList = (ListView) findViewById(R.id.nameList);
+        nameList = (ListView) findViewById(R.id.nameList);
         mListAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         nameList.setAdapter(mListAdapter);
         nameList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
