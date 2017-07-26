@@ -48,15 +48,15 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(TextUtils.isEmpty(nameInput.getText())&&(TextUtils.isEmpty(codeInput.getText()))) {
-                    Toast.makeText(Main2Activity.this, "이름과 학번을 입력하세요", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this, R.string.push_name_code, Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else if(TextUtils.isEmpty(nameInput.getText())){
-                    Toast.makeText(Main2Activity.this, "이름을 입력하세요", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this, R.string.push_name, Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else if(TextUtils.isEmpty(codeInput.getText())){
-                    Toast.makeText(Main2Activity.this, "학번을 입력하세요", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this, R.string.push_code, Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else {
