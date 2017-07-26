@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SMU_Student Enlistment Guide</string>
-    <string name="name">Name</string>
-    <string name="code">Student ID</string>
+    <string name="name">Name :</string>
+    <string name="code">Student ID :</string>
     <string name="save">SAVE</string>
     <string name="push_name">Please enter your name</string>
     <string name="push_code">Please enter your student ID</string>
