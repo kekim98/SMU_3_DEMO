@@ -5,9 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -91,28 +90,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        final SharedPreferences preferences = getSharedPreferences("Mypref", 0);
-        //preferences.edit().remove("shared_pref_key").commit();
+        final SharedPreferences preferences = getSharedPreferences("DEMO_PREFERENCE", 0);
+        final SharedPreferences.Editor editor = preferences.edit();
 
-        mListAdapter.clear();
-        System.out.println(nameList);
+        Map<String, ?> values = preferences.getAll();
+        for (String key : values.keySet()) {
+            editor.remove(key);
+            Log.d("test",key);
+            editor.commit();
+            editor.apply();
+        }
 
-//        //SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this.getApplicationContext());
-//        SharedPreferences pref = getSharedPreferences("lottoSetting", MainActivity.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = pref.edit();
-//        int keep = pref.getInt("keep", 0);
-//        editor.putInt("keep",keep);
-//        editor.clear().commit();
+        mListAdapter.notifyDataSetChanged();
 
-//        for(int position : reverseSortedPositions) {
-//            final String hi = mListAdapter.getItem(position);
-//            mListAdapter.remove(hi);
-//            editor.remove(hi);
-//            editor.apply();
-//        }
-//        mListAdapter.notifyDataSetChanged();
-
-
+            mListAdapter.clear();
         Toast.makeText(MainActivity.this, R.string.send, Toast.LENGTH_SHORT).show();
 
     }
